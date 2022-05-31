@@ -111,7 +111,7 @@ var root = {
     restaurants = restaurants.filter((item) => item.id !== id);
     return { ok };
   },
-  editrestaurant: (id, restaurant) => {
+  editrestaurant: ({id, ...restaurant}) => {
     // Your code goes here
     if (!restaurants[id]) return restaurants[id];
     restaurants[id] = {...restaurants[id], ...restaurant,};
